@@ -1,0 +1,68 @@
+{
+  "targets": [
+    {
+      "job": "envoy-gateway",
+      "url": "http://envoy:8081/stats/prometheus",
+      "health": "up",
+      "last_scrape": "2026-09-03T05:14:33.223839+00:00",
+      "last_error": null
+    },
+    {
+      "job": "lab28-api",
+      "url": "http://api:8000/metrics",
+      "health": "up",
+      "last_scrape": "2026-09-03T05:14:33.223839+00:00",
+      "last_error": null
+    },
+    {
+      "job": "feast",
+      "url": "http://feast:6570/metrics",
+      "health": "up",
+      "last_scrape": "2026-09-03T05:14:33.223839+00:00",
+      "last_error": null
+    },
+    {
+      "job": "qdrant",
+      "url": "http://qdrant:6333/metrics",
+      "health": "up",
+      "last_scrape": "2026-09-03T05:14:33.223839+00:00",
+      "last_error": null
+    },
+    {
+      "job": "vllm",
+      "url": "http://vllm:8000/metrics",
+      "health": "up",
+      "last_scrape": "2026-09-03T05:14:33.223839+00:00",
+      "last_error": null
+    },
+    {
+      "job": "otel-collector",
+      "url": "http://otel-collector:8888/metrics",
+      "health": "up",
+      "last_scrape": "2026-09-03T05:14:33.223839+00:00",
+      "last_error": null
+    }
+  ],
+  "rules": [
+    {
+      "name": "HighErrorRate",
+      "type": "alerting",
+      "health": "ok",
+      "duration": 60,
+      "labels": {
+        "severity": "critical",
+        "pillar": "reliability"
+      }
+    },
+    {
+      "name": "LatencyBudgetExceeded",
+      "type": "alerting",
+      "health": "ok",
+      "duration": 120,
+      "labels": {
+        "severity": "warning",
+        "pillar": "performance"
+      }
+    }
+  ]
+}

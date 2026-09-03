@@ -1,0 +1,39 @@
+{
+  "dag_id": "lab28_ingestion_pipeline",
+  "dag_run_id": "it-7a8f9c12",
+  "state": "success",
+  "task_instances": [
+    {
+      "task_id": "consume_kafka_batch",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-03T05:14:33.223839+00:00",
+      "end_date": "2026-09-03T05:14:33.223839+00:00"
+    },
+    {
+      "task_id": "spark_delta_merge",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-03T05:14:33.223839+00:00",
+      "end_date": "2026-09-03T05:14:33.223839+00:00"
+    },
+    {
+      "task_id": "publish_asset_event",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-03T05:14:33.223839+00:00",
+      "end_date": "2026-09-03T05:14:33.223839+00:00"
+    }
+  ],
+  "asset_events": [
+    {
+      "uri": "lab28://delta/feedback",
+      "extra": {
+        "delta_version": 1,
+        "rows_merged": 12
+      },
+      "created_dag_run_id": "it-7a8f9c12",
+      "timestamp": "2026-09-03T05:14:33.223839+00:00"
+    }
+  ]
+}

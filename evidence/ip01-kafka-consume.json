@@ -1,0 +1,28 @@
+{
+  "topic": "data.raw",
+  "key": "asker-001",
+  "partition": 0,
+  "offset": 1042,
+  "headers": {
+    "traceparent": "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+    "idempotency-key": "fb:asker-001:20260903",
+    "schema_version": "1"
+  },
+  "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",
+  "value": {
+    "schema_version": "1",
+    "event_id": "evt-7a8f9c12",
+    "idempotency_key": "fb:asker-001:20260903",
+    "entity_id": "asker-001",
+    "occurred_at": "2026-09-03T05:14:33.223839+00:00",
+    "traceparent": "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+    "payload": {
+      "kind": "feedback",
+      "asker_id": "asker-001",
+      "text": "Dịch vụ trả lời rất nhanh và trích dẫn đúng tài liệu tôi cần",
+      "rating": 5,
+      "locale": "vi",
+      "label": "positive"
+    }
+  }
+}

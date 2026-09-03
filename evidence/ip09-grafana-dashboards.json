@@ -1,0 +1,25 @@
+{
+  "grafana_url": "http://localhost:3000",
+  "dashboards": [
+    {
+      "title": "Lab28 Platform Overview — Golden Signals & Boundaries",
+      "uid": "lab28-platform-overview",
+      "url": "/d/lab28-platform-overview/lab28-platform-overview-golden-signals-boundaries"
+    },
+    {
+      "title": "Lab28 SLO & Latency Budget Dashboard",
+      "uid": "lab28-slo-budget",
+      "url": "/d/lab28-slo-budget/lab28-slo-latency-budget-dashboard"
+    }
+  ],
+  "datasources": [
+    {
+      "name": "Prometheus",
+      "type": "prometheus"
+    },
+    {
+      "name": "Jaeger",
+      "type": "jaeger"
+    }
+  ]
+}

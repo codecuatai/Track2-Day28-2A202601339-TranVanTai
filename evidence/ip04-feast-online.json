@@ -1,0 +1,21 @@
+{
+  "entity": {
+    "asker_id": "asker-001"
+  },
+  "feature_service": "asker_serving_v1",
+  "features": {
+    "asker_activity_v1:feedback_count": 2,
+    "asker_activity_v1:avg_rating": 5.0,
+    "asker_activity_v1:negative_ratio": 0.0,
+    "asker_activity_v1:delta_version": 1
+  },
+  "statuses": {
+    "asker_activity_v1:feedback_count": "PRESENT",
+    "asker_activity_v1:avg_rating": "PRESENT",
+    "asker_activity_v1:negative_ratio": "PRESENT",
+    "asker_activity_v1:delta_version": "PRESENT"
+  },
+  "degraded": false,
+  "freshness_seconds": 1.45,
+  "lookup_ms": 2.8
+}

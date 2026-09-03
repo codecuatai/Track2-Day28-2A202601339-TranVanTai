@@ -1,0 +1,24 @@
+{
+  "reachable": true,
+  "version": "0.6.3",
+  "served_models": [
+    "Qwen/Qwen2.5-0.5B-Instruct"
+  ],
+  "vllm_metric_names": [
+    "vllm:num_requests_running",
+    "vllm:num_requests_waiting",
+    "vllm:gpu_cache_usage_factor",
+    "vllm:avg_prompt_throughput_tok_per_s",
+    "vllm:avg_generation_throughput_tok_per_s",
+    "vllm:time_to_first_token_seconds",
+    "vllm:time_per_output_token_seconds",
+    "vllm:request_success_total",
+    "vllm:iteration_tokens_total",
+    "vllm:prompt_tokens_total",
+    "vllm:generation_tokens_total",
+    "vllm:num_preemptions_total"
+  ],
+  "vllm_metric_count": 12,
+  "is_real_vllm": true,
+  "detail": "vLLM identity confirmed"
+}

@@ -1,0 +1,57 @@
+{
+  "feedback": {
+    "history": [
+      {
+        "version": 1,
+        "operation": "WRITE",
+        "timestamp": "2026-09-03T04:46:10.121000+00:00",
+        "metrics": {
+          "num_added_files": 1,
+          "num_removed_files": 0,
+          "num_partitions": 0,
+          "num_added_rows": 6,
+          "execution_time_ms": 29
+        }
+      },
+      {
+        "version": 0,
+        "operation": "WRITE",
+        "timestamp": "2026-09-03T04:46:10.025000+00:00",
+        "metrics": {
+          "num_added_files": 1,
+          "num_removed_files": 0,
+          "num_partitions": 0,
+          "num_added_rows": 6,
+          "execution_time_ms": 165
+        }
+      }
+    ],
+    "time_travel": {
+      "table": "feedback",
+      "earliest_version": 0,
+      "latest_version": 1,
+      "earliest_rows": 6,
+      "latest_rows": 12,
+      "operations": [
+        "WRITE",
+        "WRITE"
+      ]
+    }
+  },
+  "documents": {
+    "history": [
+      {
+        "version": 0,
+        "operation": "WRITE",
+        "timestamp": "2026-09-03T04:46:10.177000+00:00",
+        "metrics": {
+          "num_added_files": 1,
+          "num_removed_files": 0,
+          "num_partitions": 0,
+          "num_added_rows": 13,
+          "execution_time_ms": 5
+        }
+      }
+    ]
+  }
+}

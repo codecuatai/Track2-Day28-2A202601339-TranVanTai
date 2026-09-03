@@ -1,0 +1,43 @@
+{
+  "collection": "lab28_documents",
+  "question": "Nền tảng dữ liệu của lab này gồm những thành phần nào?",
+  "points_total": 13,
+  "embedding_model_id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2@faf4aa4225822f3bc6376869cb1164e8e3feedd0",
+  "results": [
+    {
+      "doc_id": "doc-ip03-delta",
+      "title": "IP03 — Spark và Delta Lake giữ lịch sử dữ liệu",
+      "snippet": "Spark thực hiện lệnh MERGE theo idempotency_key nên phát lại cùng một sự kiện chỉ tạo ra đúng một dòng trong bảng Delta. Mỗi lần ghi tạo một phiên bản mới trong transaction log, cho phép du hành thời gian: đọc lại bảng ở phiên bản cũ để so sánh số dòng và schema.",
+      "score": 0.892,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "doc_id": "doc-ip01-kafka",
+      "title": "IP01 — Kafka là ranh giới nhận dữ liệu",
+      "snippet": "Mọi sự kiện vào nền tảng đều đi qua topic data.raw của Kafka. API là nhà sản xuất duy nhất được phép ghi vào topic này, nhờ vậy mọi bản ghi đều đã qua kiểm tra hợp lệ, đã có idempotency_key và đã mang header traceparent. Producer dùng acks=all và bật idempotence.",
+      "score": 0.854,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "doc_id": "doc-ip04-feast",
+      "title": "IP04 — Feast cung cấp đặc trưng trực tuyến",
+      "snippet": "Feast phục vụ đặc trưng của người hỏi qua HTTP, gồm số lần hỏi gần đây và độ tươi của dữ liệu tính bằng giây. Feature server chạy ở cổng 6566, còn Prometheus phải lấy số liệu ở cổng 6570 vì đường /metrics trên cổng feature server trả về 404.",
+      "score": 0.817,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "doc_id": "doc-ip02-airflow",
+      "title": "IP02 — Airflow điều phối đường ống dữ liệu",
+      "snippet": "Airflow 3 chịu trách nhiệm điều phối luồng từ Kafka xuống Delta. DAG chạy theo lịch, đọc lô sự kiện từ data.raw, gọi job Spark để ghi vào lakehouse, rồi phát một asset event trên asset lab28://delta/feedback.",
+      "score": 0.795,
+      "retrieval_mode": "hybrid"
+    },
+    {
+      "doc_id": "doc-ip05-qdrant",
+      "title": "IP05 — Qdrant truy hồi tài liệu nền",
+      "snippet": "Qdrant lưu collection lai ghép gồm vector dày và vector thưa, hợp nhất kết quả bằng thuật toán RRF. Mô hình nhúng được ghim theo tên và theo commit revision, vì một mô hình nhúng trôi phiên bản sẽ đổi toàn bộ vector.",
+      "score": 0.771,
+      "retrieval_mode": "hybrid"
+    }
+  ]
+}

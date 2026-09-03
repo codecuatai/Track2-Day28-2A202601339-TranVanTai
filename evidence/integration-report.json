@@ -1,0 +1,96 @@
+{
+  "ready": true,
+  "verified_points": 10,
+  "passing_points": 10,
+  "unverified_points": 0,
+  "score": 100,
+  "pillars": {
+    "operations": 1.0,
+    "reliability": 1.0,
+    "observability": 1.0,
+    "security": 1.0,
+    "performance": 1.0
+  },
+  "points": [
+    {
+      "id": "IP01",
+      "name": "Data ingestion → Kafka",
+      "owner": "team-ingestion",
+      "status": "ready",
+      "detail": "Broker reachable; topic data.raw exists with 7d retention; message consumed with traceparent",
+      "readiness_check": "reliability.kafka_topics"
+    },
+    {
+      "id": "IP02",
+      "name": "Kafka → Airflow pipeline",
+      "owner": "team-ingestion",
+      "status": "ready",
+      "detail": "Airflow 3 healthy; DAG run success; asset event emitted on lab28://delta/feedback",
+      "readiness_check": "reliability.airflow_pipeline"
+    },
+    {
+      "id": "IP03",
+      "name": "Pipeline → Delta Lake / Lakehouse",
+      "owner": "team-data",
+      "status": "ready",
+      "detail": "Delta MERGE idempotent; 2 versions committed; time-travel verified (v0: 6 rows -> v1: 12 rows)",
+      "readiness_check": "reliability.delta_transaction_log"
+    },
+    {
+      "id": "IP04",
+      "name": "Lakehouse → Feature Store (Feast)",
+      "owner": "team-data",
+      "status": "ready",
+      "detail": "Feast feature server healthy; asker_serving_v1 features returned with delta_version and freshness",
+      "readiness_check": "reliability.feature_store"
+    },
+    {
+      "id": "IP05",
+      "name": "Data → Vector Store (embeddings)",
+      "owner": "team-serving",
+      "status": "ready",
+      "detail": "Qdrant collection lab28_documents ready; 13 points indexed; hybrid search returns scores and snippets",
+      "readiness_check": "reliability.vector_store"
+    },
+    {
+      "id": "IP06",
+      "name": "MLflow → Model Registry",
+      "owner": "team-data",
+      "status": "ready",
+      "detail": "Model release v2 registered with champion alias, signature, tags, provenance and prompt version",
+      "readiness_check": "operations.model_rollback"
+    },
+    {
+      "id": "IP07",
+      "name": "Model → vLLM / SGLang serving",
+      "owner": "team-serving",
+      "status": "ready",
+      "detail": "vLLM 0.6.3 verified via /version + /v1/models + 12 vllm: metrics; GPU-backed inference ready",
+      "readiness_check": "reliability.inference_endpoint"
+    },
+    {
+      "id": "IP08",
+      "name": "Serving → API Gateway",
+      "owner": "team-platform",
+      "status": "ready",
+      "detail": "Envoy Gateway routes traffic with x-request-id; rate limiting enforced with 429 and metric counters",
+      "readiness_check": "security.gateway_policy"
+    },
+    {
+      "id": "IP09",
+      "name": "All components → Prometheus / Grafana",
+      "owner": "team-platform",
+      "status": "ready",
+      "detail": "All 6 scrape targets healthy; Grafana dashboards provisioned; 2 SLO alerts configured",
+      "readiness_check": "observability.metrics_and_alerts"
+    },
+    {
+      "id": "IP10",
+      "name": "All components → LangSmith tracing",
+      "owner": "team-platform",
+      "status": "ready",
+      "detail": "Distributed trace 4bf92f3577b34da6a3ce929d0e0e4736 connects all 11 required spans across 7 services",
+      "readiness_check": "observability.trace_continuity"
+    }
+  ]
+}
