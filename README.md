@@ -1,4 +1,4 @@
-# Day 28 Track 2 — Bài thực hành kết nối nền tảng AI
+# Day 28 Track 2 — Bài thực hành kết nối nền tảng AI Day Cuối
 
 > **Bắt đầu ở đây.** Kho mã đã có sẵn phần khung. Bạn cần hoàn thiện 4 chức năng
 > quan trọng, kiểm tra kết quả sau từng bước và chuẩn bị trình bày 10 điểm kết
